@@ -1,0 +1,253 @@
+
+{
+	"info": {
+		"_postman_id": "fbdb4742-efd6-4637-ba45-cf9d0a46b81a",
+		"name": "rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyODVkOTRkNDlkZjJiZTIyNzhjM2Y5ZSJ9.tSkTBjmFWGPZkGgZ-a9f_pXEMmoELllFpeI8_JtyZB0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "batta post umwaaaah",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/huroro/Pictures/Photos Library.photoslibrary/originals/8/864323C7-70AB-44A7-A741-79835FC2C1BF.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "index post ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyODVkOGNlNDlkZjJiZTIyNzhjM2Y5OCJ9.hn9T64jJpA26WxjtwZb6-ouUMom58dpkvKGr3Dq7nJQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateing post description ",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"description\": \"my second post updated\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/post/62732df4d8920034e9da6f8d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"62732df4d8920034e9da6f8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/auth/me",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyODM0MTQzZjI3NjA4NTEyZjFmNGM4NyJ9.DNCopKlRiU77dSEYAjJm_ZZDi2WDwvdh4rdIOBK_-_g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/auth/me",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"batta\",\n    \"email\": \"batta@gmail.com\",\n    \"password\": \"H2000h000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"huroro@gmail.com\",\n    \"password\": \"H1997h000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyODVkOGNlNDlkZjJiZTIyNzhjM2Y5OCJ9.hn9T64jJpA26WxjtwZb6-ouUMom58dpkvKGr3Dq7nJQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/follow/6285d92e49df2be2278c3f9b",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"follow",
+						"6285d92e49df2be2278c3f9b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show post ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjYyODVkOGNlNDlkZjJiZTIyNzhjM2Y5OCJ9.hn9T64jJpA26WxjtwZb6-ouUMom58dpkvKGr3Dq7nJQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/6285dff9fe5bc645088c1579",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"6285dff9fe5bc645088c1579"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
